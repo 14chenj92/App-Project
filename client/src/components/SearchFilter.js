@@ -1,14 +1,15 @@
+import '../styles/SearchFilter.css';
 
-
-
-const SearchFilter= () => {
+const SearchFilter= (props) => {
     return (
       <>
-  <ul className="searchfilter">
-    <li className="strength"><a href="/">Strength</a></li>
-    <li className="basketball"><a href="profile">Basketball</a></li>
-    <li className="yoga"><a href="signup">Yoga</a></li>
-  </ul>
+  <div class="searchCard">
+  <div className="img">
+    <img src={props.icon} alt="" className="searchIcon"/>
+  </div>
+    <h4>{props.activity}</h4>
+    <p>{props.description}</p>
+  </div>
     </>
     )
 }

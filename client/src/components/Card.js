@@ -1,11 +1,14 @@
 import React from "react";
+import '../styles/Card.css';
+
 const pictureStyle = {
   width: '100px',
   height: '100px'
 };
+
 function HomeCard(props) {
     return (
-      <div className="card">
+      <div className="homepageCard">
       <div className="content">
         <div className="img">
          <img src={props.picture} alt="" style={pictureStyle}/>
