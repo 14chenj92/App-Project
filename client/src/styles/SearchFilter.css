@@ -5,12 +5,17 @@
 
 .searchFilter {
     display: flex;
-    
+    justify-content: space-evenly;
+    margin: 50px 150px 0px 150px;
 }
 
-.searchCard{
-    padding: 5px 5px 5px 5px;
-    margin: 10px 10px 10px 10px;
+.searchBar {
+    margin-bottom: 50px;
+}
+
+.searchCard {
+    padding: 5px 5px;
+    margin: 20px 20px;
     border: 1px solid black;
     width: 100px;
     height: 100px;
