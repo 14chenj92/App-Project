@@ -1,6 +1,14 @@
+.imgIcon {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0px 0px 0px;
+}
+
 .searchIcon {
     width: 32px;
     height: 32px;
+    display: flex;
+    justify-content: center;
 }
 
 .searchFilter {
@@ -17,6 +25,12 @@
     padding: 5px 5px;
     margin: 20px 20px;
     border: 1px solid black;
-    width: 100px;
+    width: 110px;
     height: 100px;
+}
+
+.searchCard h4 {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
 }
