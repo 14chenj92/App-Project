@@ -42,7 +42,7 @@ const userSchema = new Schema({
   country: {
     type: String,
     required: true,
-    minlength: 3,
+    minlength: 4,
   },
   trainer: {
     type: Boolean,
@@ -50,6 +50,7 @@ const userSchema = new Schema({
     minlength: 1,
   },
 });
+
   userSchema.pre('save', async function (next) {
     if (this.isNew || this.isModified('password')) {
       const saltRounds = 16;
