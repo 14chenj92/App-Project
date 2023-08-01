@@ -1,0 +1,13 @@
+[
+    {
+      "username": "Jerry123",
+      "email": "sad@gmail.com",
+      "password": "qwerty",
+      "first_name": "Jerry",
+      "last_name": "Liu",
+      "age": 18,
+      "sex": "Male",
+      "country": "USA",
+      "trainer": true
+    }
+]

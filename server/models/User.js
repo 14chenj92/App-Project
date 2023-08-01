@@ -30,7 +30,7 @@ const userSchema = new Schema({
     minlength: 2,
   },
   age: {
-    type: String,
+    type: Number,
     required: true,
     minlength: 2,
   },
