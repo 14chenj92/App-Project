@@ -1,7 +1,9 @@
 import React from 'react';
-import ImageSlider from '../components/ImageSlider';
+import ImageSlider from '../components/ImageSlider.tsx';
 import HomeCard from '../components/Card';
 import SearchFilter from '../components/SearchFilter';
+import { SearchOutlined } from '@ant-design/icons';
+import { Button, Tooltip, Space } from 'antd';
 
 import "../styles/Homepage.css";
 import "../styles/Card.css";
@@ -51,10 +53,7 @@ const Homepage = () => {
         activity="Taekwondo"/>
         </div>
       <div className="searchBar">
-               <form action="#" className="search">
-                  <div class="field control has-icons-left">
-                     <input class="input is-success" type="text" placeholder="Search"></input>
-                  </div></form>
+      <Button icon={<SearchOutlined />} size="large">Search</Button>
       </div>
       <ImageSlider images={images}/>
       <h2 className="trainerTitle">Trainer Profiles</h2>

@@ -24,10 +24,6 @@ function App() {
                 element={<Signup />}
               />
               </Routes>
-          <body>
-          <div id="container" style="padding: 24px" />
-          <script>const mountNode = document.getElementById('container');</script>
-        </body>
     </div>
     </Router>
   );

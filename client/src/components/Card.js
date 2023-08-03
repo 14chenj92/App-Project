@@ -1,5 +1,6 @@
 import React from "react";
 import '../styles/Card.css';
+import { Card, Button } from 'antd';
 
 const pictureStyle = {
   width: '100px',
@@ -17,6 +18,7 @@ function HomeCard(props) {
           <div className="name">{props.name}</div>
           <div className="job">{props.title}</div>
         </div>
+        <Button a href="profile">See Profile</Button>
         <div className="media-icons">
           <a href="https://www.facebook.com/" target="_blank"><i className="fab fa-facebook-f"></i></a>
           <a href="https://www.twitter.com/" target="_blank"><i className="fab fa-twitter"></i></a>

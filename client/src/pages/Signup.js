@@ -1,5 +1,6 @@
 import "../styles/Signup.css";
 import Google from "../images/googleicon.png";
+import SignUpModal from '../components/Modal.tsx';
 
 const Signup = () => {
     return (
@@ -28,7 +29,7 @@ const Signup = () => {
                     </form>
 
                     <div className="form-link">
-                        <span>Don't have an account? <a href="#" className="link signup-link">Signup</a></span>
+                        <span>Don't have an account? <SignUpModal className="link signup-link">Signup</SignUpModal></span>
                     </div>
                 </div>
 

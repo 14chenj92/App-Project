@@ -1,5 +1,4 @@
 import React from 'react';
-import './index.css';
 import type { Dayjs } from 'dayjs';
 
 import { Calendar, theme } from 'antd';
@@ -9,7 +8,7 @@ const onPanelChange = (value: Dayjs, mode: CalendarMode) => {
   console.log(value.format('YYYY-MM-DD'), mode);
 };
 
-const App: React.FC = () => {
+const CalendarApp: React.FC = () => {
   const { token } = theme.useToken();
 
   const wrapperStyle: React.CSSProperties = {
@@ -25,4 +24,4 @@ const App: React.FC = () => {
   );
 };
 
-export default App;
+export default CalendarApp;
