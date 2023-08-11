@@ -1,6 +1,6 @@
 import "../styles/Signup.css";
 import Google from "../images/googleicon.png";
-import SignUpModal from '../components/Modal.tsx';
+import SignUpModal from '../components/SignUp/SignUpModal.tsx';
 
 const Signup = () => {
     return (

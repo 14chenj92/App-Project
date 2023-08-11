@@ -74,3 +74,9 @@
     height: 400px;
     width: 600px;
   }
+
+  .searchSection {
+    width: 25%;
+    margin: 10px 10px 10px 0px;
+    float: left;
+  }

@@ -1,7 +1,7 @@
-import '../styles/SearchFilter.css';
+import '../../styles/SearchIcon.css';
 import { Button } from 'antd';
 
-const SearchFilter= (props) => {
+const SearchIcon= (props) => {
     return (
       <>
   <Button className="searchCard">
@@ -15,5 +15,5 @@ const SearchFilter= (props) => {
     )
 }
 
-export default SearchFilter;
+export default SearchIcon;
 
