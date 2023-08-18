@@ -16,27 +16,43 @@ const items: MenuProps['items'] = [
 
 const App: React.FC = () => (
   <div className="searchFilter">
+  <p className="searchLabels">Category</p>
   <Space direction="vertical">
     <Space wrap>
       <Dropdown menu={{ items }} placement="bottomLeft">
         <Button>bottomLeft</Button>
       </Dropdown>
-      <Dropdown menu={{ items }} placement="bottom">
-        <Button>bottom</Button>
-      </Dropdown>
-      <Dropdown menu={{ items }} placement="bottomRight">
-        <Button>bottomRight</Button>
+    </Space>
+  </Space>
+  <p className="searchLabels">Language</p>
+  <Space direction="vertical">
+    <Space wrap>
+      <Dropdown menu={{ items }} placement="bottomLeft">
+        <Button>bottomLeft</Button>
       </Dropdown>
     </Space>
+  </Space>
+  <p className="searchLabels">Timezone</p>
+  <Space direction="vertical">
     <Space wrap>
-      <Dropdown menu={{ items }} placement="topLeft">
-        <Button>topLeft</Button>
+      <Dropdown menu={{ items }} placement="bottomLeft">
+        <Button>bottomLeft</Button>
       </Dropdown>
-      <Dropdown menu={{ items }} placement="top">
-        <Button>top</Button>
+    </Space>
+  </Space>
+  <p className="searchLabels">Class Type</p>
+  <Space direction="vertical">
+    <Space wrap>
+      <Dropdown menu={{ items }} placement="bottomLeft">
+        <Button>bottomLeft</Button>
       </Dropdown>
-      <Dropdown menu={{ items }} placement="topRight">
-        <Button>topRight</Button>
+    </Space>
+  </Space>
+  <p className="searchLabels">Price Range</p>
+  <Space direction="vertical">
+    <Space wrap>
+      <Dropdown menu={{ items }} placement="bottomLeft">
+        <Button>bottomLeft</Button>
       </Dropdown>
     </Space>
   </Space>

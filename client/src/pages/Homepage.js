@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ImageSlider from '../components/Homepage/ImageSlider.tsx';
 import HomeCard from '../components/Homepage/Card.js';
 import SearchIcon from '../components/Homepage/SearchIcon.js';
 import SearchFilter from '../components/Homepage/SearchFilter.tsx';
-import { SearchOutlined } from '@ant-design/icons';
+import TrainerCard from '../components/Homepage/TrainerCard.js';
+import { SearchOutlined, CloseOutlined } from '@ant-design/icons';
 import { Button } from 'antd';
 
 import "../styles/Homepage.css";
@@ -15,16 +16,34 @@ import Workout4 from "../images/workout4.png";
 import Avatar from "../images/avatar.webp";
 
 const Homepage = () => { 
-    const images = [
-      Workout,
-      Workout2,
-      Workout3,
-      Workout4,
-    ];
+  const [isSearchVisible, setIsSearchVisible] = useState(false);
+
+  const toggleSearchVisibility = () => {
+    setIsSearchVisible(!isSearchVisible);
+    setIsDivVisible(!isDivVisible);
+  };
+
+  const searchStyle = {
+    display: isSearchVisible ? 'flex' : 'none'
+  };
+
+  const [isDivVisible, setIsDivVisible] = useState(true);
+
+  const divStyle = {
+    display: isDivVisible ? 'block' : 'none'
+  };
+
+  const images = [
+    Workout,
+    Workout2,
+    Workout3,
+    Workout4,
+  ];
+
   
     return (
       <>
-      <div className="searchFilter">
+      <div className="homepageIcons">
         <SearchIcon 
         icon="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAABx0lEQVR4nO2VTytEURjGf1EzCyVhQYaVkYXYys5GNMUHEF+CBWWjWWFrYYNCU5omCyPiGxCLSWyk2dj5O0NNIzM69ajbbe41rpkrNU+9zZ33PO/7POeec+6BGv4pQkAcyCgSQNhP8QegaAuT6/DDQFyC+xI0kVRu1w8DGYlZZ9up3LMfBl4kFvorAwmJJWXCxIFyZnmqjh7g3mETduMTOrThXhRxP8X/FA3APHAJ5CyvP6fcnDhVQStwVmLt7XEKtFTDwI4EroBhIGgZCyp3Lc52pcX7gALwajv/dnSKU1BNxbCmma0CARdeQJyiaiqCJsuseoFpF+6UbsUP4A1oroSBWc3oUP/NJnPCuX6PVDPj9SMzAUQlmlWzCDCoZycUxYnoOaseUfX89rpudzhaKaAOiJVhICZuyqGX0XDFhS6aRWBcrk3RApAvw0Be3HbVjqtXUr1/hCHdfl/CJtIu/LSFl1et6eEJU9r5ptk7sAeM6fXWAyPAFvAInABdGhu1mTY9Jr0YuFWDZcu69QMrwF2JtT221bcBSxq78WLgUcVG1A1h8cy5t2NAY6bXj7FZxsVTbqx7MdAIbABPvxB+krjpVUMNlMIn5oa8zzUnk6MAAAAASUVORK5CYII="
         activity="Yoga"/>
@@ -54,8 +73,9 @@ const Homepage = () => {
         activity="Taekwondo"/>
         </div>
       <div className="searchBar">
-      <Button icon={<SearchOutlined />} size="large">Search</Button>
+      <Button icon={<SearchOutlined />} size="large" onClick={toggleSearchVisibility}>Search</Button>
       </div>
+      <div className="fasthidden"style={divStyle}>
       <ImageSlider images={images}/>
       <h2 className="trainerTitle">Trainer Profiles</h2>
       <div className="homeCard">
@@ -80,9 +100,26 @@ const Homepage = () => {
         name="Jonathan Lo"
         title="Journalist"/> 
         </div>
+        </div>
 
-        <div className="searchSection">
+        <div className="searchSection fasthidden" style={searchStyle}>
         <SearchFilter/>
+        
+        <div className="trainerCardSection">
+        <TrainerCard
+        name="Jaopang Curry"
+        desc="Good day! I hope you are doing well. My name is Jaopong, but you can just call me Jay. By profession, I'm a high school basketball coach for more than 3 years."
+        />
+        <TrainerCard
+        name="Jaopang Curry"
+        desc="Good day! I hope you are doing well. My name is Jaopong, but you can just call me Jay. By profession, I'm a high school basketball coach for more than 3 years."
+        />
+        <TrainerCard
+        name="Jaopang Curry"
+        desc="Good day! I hope you are doing well. My name is Jaopong, but you can just call me Jay. By profession, I'm a high school basketball coach for more than 3 years."
+        />
+        <Button icon={<CloseOutlined />} size="large" onClick={toggleSearchVisibility}></Button>
+        </div>
         </div>
       </>
     );
