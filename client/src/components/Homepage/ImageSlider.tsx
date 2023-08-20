@@ -1,42 +1,27 @@
-// import React, { useState } from 'react';
-// import "../styles/Homepage.css";
-
-// const ImageSlider = ({ images }) => {
-//   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-//   const goToNextImage = () => {
-//     setCurrentImageIndex((prevIndex) =>
-//       prevIndex === images.length - 1 ? 0 : prevIndex + 1
-//     );
-//   };
-
-//   const goToPreviousImage = () => {
-//     setCurrentImageIndex((prevIndex) =>
-//       prevIndex === 0 ? images.length - 1 : prevIndex - 1
-//     );
-//   };
-
-//   return (
-//     <div className="wrapper">
-//       <img src={images[currentImageIndex]} alt="Slider" className="carousel" />
-//       <button onClick={goToPreviousImage}><i class="fa-solid fa-arrow-left button" id="prev"></i></button>
-//       <button onClick={goToNextImage}><i class="fa-solid fa-arrow-right button" id="next"></i></button>
-//     </div>
-//   );
-// };
-
-// export default ImageSlider;
 
 import React from 'react';
 import { Carousel } from 'antd';
+// import Workout from "../../images/workout.jpg";
 
 const contentStyle: React.CSSProperties = {
-  margin: 0,
-  height: '160px',
+  height: '400px',
   color: '#fff',
   lineHeight: '160px',
-  textAlign: 'center',
+  textAlign: 'end',
   background: '#364d79',
+};
+
+const Picture1: React.CSSProperties = {
+  height: '400px',
+  color: '#fff',
+  textAlign: 'end',
+  fontSize: '24px',
+  background: 'black',
+  position:'relative'
+};
+
+const text: React.CSSProperties = {
+  alignSelf: 'flex-end'
 };
 
 const ImageSlider: React.FC = () => {
@@ -45,18 +30,18 @@ const ImageSlider: React.FC = () => {
   };
 
   return (
-    <Carousel afterChange={onChange}>
+    <Carousel style={Picture1} afterChange={onChange}>
       <div>
-        <h3 style={contentStyle}>Picture 1</h3>
+        <h3 style={text}>Find Your Personal Trainer Today</h3>
       </div>
       <div>
-        <h3 style={contentStyle}>2</h3>
+        <h3 style={contentStyle}> </h3>
       </div>
       <div>
-        <h3 style={contentStyle}>3</h3>
+        <h3 style={contentStyle}> </h3>
       </div>
       <div>
-        <h3 style={contentStyle}>4</h3>
+        <h3 style={contentStyle}> </h3>
       </div>
     </Carousel>
   );

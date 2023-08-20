@@ -9,6 +9,7 @@ import { Button } from 'antd';
 
 import "../styles/Homepage.css";
 import "../styles/Card.css";
+import "../styles/TrainerCard.css";
 import Workout from "../images/workout.jpg";
 import Workout2 from "../images/workout2.jpg";
 import Workout3 from "../images/workout3.avif";
@@ -107,19 +108,31 @@ const Homepage = () => {
         
         <div className="trainerCardSection">
         <TrainerCard
+        picture={Avatar}
         name="Jaopang Curry"
         desc="Good day! I hope you are doing well. My name is Jaopong, but you can just call me Jay. By profession, I'm a high school basketball coach for more than 3 years."
+        timezone="PST"
+        language="English, Japanese"
+        price="35"
         />
         <TrainerCard
-        name="Jaopang Curry"
-        desc="Good day! I hope you are doing well. My name is Jaopong, but you can just call me Jay. By profession, I'm a high school basketball coach for more than 3 years."
+        picture={Avatar}
+        name="Bathan Baller"
+        desc="Hey I am a retired basketball coach from the local community college. I've been teaching for 20 years and I specialize in correcting bad habits on the court."
+        timezone="PST"
+        language="English, Chinese"
+        price="30"
         />
         <TrainerCard
-        name="Jaopang Curry"
-        desc="Good day! I hope you are doing well. My name is Jaopong, but you can just call me Jay. By profession, I'm a high school basketball coach for more than 3 years."
+        picture={Avatar}
+        name="Lorid Horichi"
+        desc="I'm a Youtuber who does streets basketball vlogs and I can show you some cool drills and moves you can use for your pick up games."
+        timezone="PST"
+        language="English"
+        price="35"
         />
-        <Button icon={<CloseOutlined />} size="large" onClick={toggleSearchVisibility}></Button>
         </div>
+        <Button className="x-Button" icon={<CloseOutlined />} size="large" onClick={toggleSearchVisibility}></Button>
         </div>
       </>
     );

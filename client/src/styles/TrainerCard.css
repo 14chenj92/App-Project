@@ -1,0 +1,35 @@
+.trainerCard {
+  width: 90%;
+  border: 1px solid black;
+  height: 200px;
+  margin: 0% 5% 5% 5%;
+}
+
+.x-Button {
+  float: right;
+  margin-right: 5%;
+}
+
+.trainerCardImg {
+  float: left;
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  margin-left: 2%;
+}
+
+.trainerCardInfo {
+  margin-top: 1%;
+  display: inline-flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.trainerCardPrice {
+  float: right;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  margin-top: 5%;
+  text-align: center;
+}

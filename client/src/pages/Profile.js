@@ -2,7 +2,7 @@ import "../styles/Profile.css";
 import Avatar from "../images/avatar.webp";
 import Workout from "../images/workout.jpg";
 import React from 'react';
-import { Button, Space } from 'antd';
+import { Button, Rate } from 'antd';
 import CalendarApp from '../components/Profile/Calendar.tsx';
 import Classes from '../components/Profile/Classes';
 import Reviews from '../components/Profile/Reviews';
@@ -16,13 +16,7 @@ const Profile = () => {
         <img src={Avatar} alt=""/>
         </div>
         <div className="name_job">Jerry Liu</div>
-        <div className="rating">
-          <i className="fas fa-star"></i>
-          <i className="fas fa-star"></i>
-          <i className="fas fa-star"></i>
-          <i className="fas fa-star"></i>
-          <i className="far fa-star"></i>
-        </div>
+        <Rate />
         <p>Yoga Instructor</p>
         <p>10 Years Of Experience</p>
         <hr style={{ width: '100%'}} />

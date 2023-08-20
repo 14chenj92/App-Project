@@ -6,16 +6,30 @@ import { Button, Dropdown, Space } from 'antd';
 const items: MenuProps['items'] = [
   {
     key: '1',
-    label: (<p>Basketball</p>)
+    label: (<p>Yoga</p>)
   },
   {
     key: '2',
     label: (<p>Basketball</p>)
-  }
+  },
+  {
+    key: '3',
+    label: (<p>Swimming</p>)
+  },
+  {
+    key: '4',
+    label: (<p>Cycling</p>)
+  },
+  {
+    key: '5',
+    label: (<p>Strength</p>)
+  },
 ];
+
 
 const App: React.FC = () => (
   <div className="searchFilter">
+  <div className="labels">
   <p className="searchLabels">Category</p>
   <Space direction="vertical">
     <Space wrap>
@@ -56,6 +70,7 @@ const App: React.FC = () => (
       </Dropdown>
     </Space>
   </Space>
+  </div>
   </div>
 );
 
