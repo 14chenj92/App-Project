@@ -2,7 +2,6 @@ const express = require('express');
 const { ApolloServer } = require('apollo-server-express');
 const path = require('path');
 const { authMiddleware } = require('./utils/auth');
-const NodeGeocoder = require('node-geocoder'); //Locationiq API through node-geocoder
 
 const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
@@ -25,20 +24,6 @@ if (process.env.NODE_ENV === 'production') {
 app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
-
-const options = {
-  provider: 'locationiq',
-  apiKey: 'pk.24edc7d82d89ef6dc454dc971e52963b', //for Locationiq API
-};
-const geocoder = NodeGeocoder(options);
-
-// Using callback
-app.post('/api/location', async (req, res) => {
-  const address = req.body.address;
-  const locationData = await geocoder.geocode(address);
-  res.json(locationData);
-});
-
 
 // Create a new instance of an Apollo server with the GraphQL schema
 const startApolloServer = async () => {

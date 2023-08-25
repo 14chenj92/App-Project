@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Homepage from './pages/Homepage';
 import Profile from './pages/Profile';
 import Signup from './pages/Signup';
+import Dashboard from './pages/Dashboard';
 
 function App() {
   return (
@@ -22,6 +23,10 @@ function App() {
               <Route 
                 path="/signup"
                 element={<Signup />}
+              />
+              <Route 
+                path="/dashboard"
+                element={<Dashboard />}
               />
               </Routes>
     </div>
