@@ -6,7 +6,7 @@ db.once('open', async () => {
     try {
         await User.deleteMany({})
 
-        await User.creater(userSeeds);
+        await User.create(userSeeds);
 
 
     } catch (err) {
