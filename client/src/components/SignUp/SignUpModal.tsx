@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Button, Modal } from 'antd';
+import { Button, Modal, Input } from 'antd';
+import { UserOutlined, EyeInvisibleOutlined, EyeTwoTone, KeyOutlined, MailOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 
 import { useMutation } from '@apollo/client';
@@ -58,7 +59,7 @@ const SignUpModal: React.FC = () => {
       <Button onClick={showModal}>
         Signup
       </Button>
-      <Modal title="Basic Modal" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+      <Modal title="Sign Up" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
       <div className="card-body">
             {data ? (
               <p>
@@ -67,15 +68,17 @@ const SignUpModal: React.FC = () => {
               </p>
             ) : (
               <form onSubmit={handleFormSubmit}>
-                <input
+                <Input size="large"  prefix={<UserOutlined />}
+                  style={{marginBottom:'5%'}}
                   className="form-input userinput"
-                  placeholder="Your username"
+                  placeholder="Your Username"
                   name="username"
                   type="text"
                   value={formState.username}
                   onChange={handleChange}
                 />
-                <input
+                <Input size="large" prefix={<MailOutlined />}
+                  style={{marginBottom:'5%'}}
                   className="form-input userinput"
                   placeholder="Your email"
                   name="email"
@@ -83,9 +86,11 @@ const SignUpModal: React.FC = () => {
                   value={formState.email}
                   onChange={handleChange}
                 />
-                <input
+                <Input.Password size="large" prefix={<KeyOutlined />}
+                  iconRender={(visible) => (visible ? <EyeTwoTone /> : <EyeInvisibleOutlined /> )}
+                  style={{marginBottom:'5%'}}
                   className="form-input userinput"
-                  placeholder="******"
+                  placeholder="Your Password"
                   name="password"
                   type="password"
                   value={formState.password}

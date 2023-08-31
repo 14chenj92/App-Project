@@ -1,50 +1,36 @@
-
 import React from 'react';
+import "../../styles/Homepage.css";
+import Workout from "../../images/workout.jpg";
+import Workout2 from "../../images/workout2.jpg";
+import Workout3 from "../../images/workout3.avif";
+import Workout4 from "../../images/workout4.png";
+
 import { Carousel } from 'antd';
-// import Workout from "../../images/workout.jpg";
 
 const contentStyle: React.CSSProperties = {
-  height: '400px',
+  height: '300px',
   color: '#fff',
   lineHeight: '160px',
-  textAlign: 'end',
-  background: '#364d79',
+  textAlign: 'center',
+  background: 'blue',
+  marginBottom: '5%'
 };
 
-const Picture1: React.CSSProperties = {
-  height: '400px',
-  color: '#fff',
-  textAlign: 'end',
-  fontSize: '24px',
-  background: 'black',
-  position:'relative'
-};
+const App: React.FC = () => (
+  <Carousel autoplay>
+    <div>
+      <img src={Workout} style={contentStyle}></img>
+    </div>
+    <div>
+    <img src={Workout2} style={contentStyle}></img>
+    </div>
+    <div>
+    <img src={Workout3} style={contentStyle}></img>
+    </div>
+    <div>
+    <img src={Workout4} style={contentStyle}></img>
+    </div>
+  </Carousel>
+);
 
-const text: React.CSSProperties = {
-  alignSelf: 'flex-end'
-};
-
-const ImageSlider: React.FC = () => {
-  const onChange = (currentSlide: number) => {
-    console.log(currentSlide);
-  };
-
-  return (
-    <Carousel style={Picture1} afterChange={onChange}>
-      <div>
-        <h3 style={text}>Find Your Personal Trainer Today</h3>
-      </div>
-      <div>
-        <h3 style={contentStyle}> </h3>
-      </div>
-      <div>
-        <h3 style={contentStyle}> </h3>
-      </div>
-      <div>
-        <h3 style={contentStyle}> </h3>
-      </div>
-    </Carousel>
-  );
-};
-
-export default ImageSlider;
+export default App;
