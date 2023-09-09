@@ -18,37 +18,7 @@ const userSchema = new Schema({
     type: String,
     required: true,
     minlength: 5,
-  },
-  first_name: {
-    type: String,
-    required: true,
-    minlength: 2,
-  },
-  last_name: {
-    type: String,
-    required: true,
-    minlength: 2,
-  },
-  age: {
-    type: Number,
-    required: true,
-    minlength: 2,
-  },
-  sex: {
-    type: String,
-    required: true,
-    minlength: 1,
-  },
-  country: {
-    type: String,
-    required: true,
-    minlength: 3,
-  },
-  trainer: {
-    type: Boolean,
-    required: true,
-    minlength: 1,
-  },
+  }
 });
   userSchema.pre('save', async function (next) {
     if (this.isNew || this.isModified('password')) {
