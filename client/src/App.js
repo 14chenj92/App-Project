@@ -4,6 +4,7 @@ import Homepage from './pages/Homepage';
 import Profile from './pages/Profile';
 import Signup from './pages/Signup';
 import Dashboard from './pages/Dashboard';
+import Footer from './components/Footer';
 
 import React from 'react';
 import {
@@ -64,6 +65,7 @@ function App() {
                 element={<Dashboard />}
               />
               </Routes>
+      <Footer/>
     </div>
     </Router>
     </ApolloProvider>
