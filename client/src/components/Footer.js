@@ -19,7 +19,7 @@ function Footer() {
         <a className="footericon" target="blank" href="https://www.linkedin.com/">
         <img src= {LinkedIn} className="icons" alt="linkedin"/></a>  
         
-        <a className="footericon" target="blank" href="https://stackoverflow.com">
+        <a className="footericon" target="blank" href="https://instagram.com">
         <img src= {Stack} className="icons" alt="stack"/></a> 
         </ul>
         </div> 
